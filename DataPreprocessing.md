@@ -56,11 +56,11 @@ X = onehotencoder.fit_transform(X).toarray()
 * **Normalisation** for each observation and feature, withdraw the minimun value from them, dividing this result by the difference from the minimun and the maximun value;
 * No matter the process, the goal is to put all the variables on the same range and scale, making sure that no one will dominate the other;
 * can be achieved by using the **StandardScaler** class from the **sklearn.preprocessing** library;
-"""
+'''
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train) # Fit and Transform for training
 X_test = sc_X.transform(X_test) # Transform only for testing
-"""
+'''
 * We generally only fit the training set because the scaler is already fitted to the variables;
 

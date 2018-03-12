@@ -25,20 +25,20 @@
 # Identifying/Encoding Categorical Data
 * Machine learing models are based on mathematical equations, so columns that are represented by texts need to be categorized and represented as numbers;
 * Can be achieved by utilizing the **LabelEncoder** class from the Sci-Kit learn library, fit it to the the column we want to encode;
-"""
+```python
 from sklearn.preprocessing import LabelEncoder
 labelencoder_X = LabelEncoder()
 X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
-"""
+```
 * This process encodes the categorized data in a crescent fashion, giving us the ability of comparing them one to the other. When this process does not make sense, we can use a new process of encoding, called **Dummy Encoding**;
 * **Dummy Encoding** is the process of creating an encoder matrix for each category available in the categorical column. The same amount of categories will be the amount of columns of the new matrix, where each column represents a category and only one of them for a dataset row will have a value;
 
 * This process of Dummy Encoding can be achieved by using the **OneHotEncoder** class from the Sci-Kit learn library;
-"""
+```python
 from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder(categorical_features=[0])
 X = onehotencoder.fit_transform(X).toarray()
-"""
+```
 
 # Training and Testing Sets
 * When creating machine learning models, we always want to separate the datasets in two parts, the **training set** and the **testing set**;
@@ -56,11 +56,11 @@ X = onehotencoder.fit_transform(X).toarray()
 * **Normalisation** for each observation and feature, withdraw the minimun value from them, dividing this result by the difference from the minimun and the maximun value;
 * No matter the process, the goal is to put all the variables on the same range and scale, making sure that no one will dominate the other;
 * can be achieved by using the **StandardScaler** class from the **sklearn.preprocessing** library;
-'''
+```python
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train) # Fit and Transform for training
 X_test = sc_X.transform(X_test) # Transform only for testing
-'''
+```
 * We generally only fit the training set because the scaler is already fitted to the variables;
 

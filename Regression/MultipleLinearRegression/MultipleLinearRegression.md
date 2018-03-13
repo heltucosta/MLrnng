@@ -13,7 +13,7 @@
 ![Dummy Variables Exemplification](DummyVariables.jpg)
 * **Dummy Variable Trap**: when one variable can be predicted by means of another variable, making it impossible for the algorithm to determine the impact of each variable on the model(Multiple Linearity);
 * We will always have to omit **one** dummy variable from our matrix, independently of the amount of variables in the matrix;
-![Dummy Variable Trap Solved](Dummyvariables2.jpg)
+![Dummy Variable Trap Solved](DummyVariables2.jpg)
 * This characteristics comes from the mathematics of solving linear equations, where we eliminate variables by replacing them with a relation to the other variable in the new equation, solving it for the last variable and then working our way back;
 
 ## How to build models

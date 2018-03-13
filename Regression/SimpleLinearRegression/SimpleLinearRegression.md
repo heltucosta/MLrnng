@@ -13,5 +13,3 @@
 ## Ordinary Least Squares
 * the process used to fit the model to the dataset;
 * Finds the difference from model expected value to observed value and takes it square for every observation on the dataset. The best fitting model will be the one that has the minimun sum of the difference squares, which means the models tries to deviate the least as possible from the observations;
-
-## Implementing in Python

@@ -1,4 +1,5 @@
 # Decision Regression Tree
+* Non-Linear and Non-Continuum model;
 * Algorithm automatically separates the information into clusters (leaves)
 * Takes the average of values from all leaves and when given new information, predict the value with this averages;
 * Utilizes information entropy to determine where are the splits on the dataset going to happen;
@@ -7,3 +8,4 @@
 ![Scatterplot Splits](ScatterSplits.jpg)
 ### Decision Regression Tree Visualization
 ![DecisionTree](DecisionTree.jpg)
+* Much more powerfull on multiple dimensions
